@@ -1,2 +1,4 @@
 # FastaReader
-Program for read fasta format fail by Ivan Alferov
+=====
+
+Program for read fasta format file by Ivan Alferov
