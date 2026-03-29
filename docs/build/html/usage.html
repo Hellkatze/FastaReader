@@ -2,7 +2,7 @@
 <html lang="ru" data-accent-color="gold" data-content_root="./">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Usage - документация Fasta Reader beta-01</title><link rel="index" title="Алфавитный указатель" href="genindex.html" /><link rel="search" title="Поиск" href="search.html" /><link rel="prev" title="Fasta Reader documentation" href="index.html" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Использование - документация Fasta Reader 1</title><link rel="index" title="Алфавитный указатель" href="genindex.html" /><link rel="search" title="Поиск" href="search.html" /><link rel="prev" title="Fasta Reader documentation" href="index.html" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"dark");
   </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=e1a1ceaf" />
@@ -17,7 +17,7 @@
   --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
 }
 </style>
-    <meta property="og:type" content="website"/><meta property="og:title" content="Usage"/>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Использование"/>
     <meta name="twitter:card" content="summary"/>
   </head>
 <body><div class="sy-head">
@@ -56,7 +56,7 @@ data-aria-dark="Switch to auto color mode">
       <div class="sy-scrollbar p-6">
         <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Использование</a></li>
 </ul>
 
         </div>
@@ -69,7 +69,8 @@ data-aria-dark="Switch to auto color mode">
       <i class="i-lucide close"></i>
     </button>
     <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
-<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#id2">&#1059;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1082;&#1072;</a></li>
+<li><a class="reference internal" href="#id3">&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;</a></li>
 </ul>
 </div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
   </aside>
@@ -87,7 +88,7 @@ data-aria-dark="Switch to auto color mode">
         <span>/</span>
         <meta itemprop="position" content="1" />
       </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <strong itemprop="name">Usage</strong>
+        <strong itemprop="name">Использование</strong>
         <meta itemprop="position" content="2" />
       </li></ol>
     <div class="xl:hidden ml-1">
@@ -100,11 +101,30 @@ data-aria-dark="Switch to auto color mode">
 </div><div class="flex flex-col break-words justify-between">
       <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
   <article class="yue" role="main">
-          <section id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Ссылка на этот заголовок">¶</a></h1>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Ссылка на этот заголовок">¶</a></h2>
-<p>To use Lumache, first install from my GitHub&lt;<a class="reference external" href="https://github.com/hellkatze/FastaRaeder/">https://github.com/hellkatze/FastaRaeder/</a>&gt;</p>
+          <section id="id1">
+<h1>Использование<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<section id="id2">
+<h2>Установка<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Для использования FastaReader скачайте py файл с таким названием с моего <a class="reference external" href="https://github.com/Hellkatze/FastaRaeder/">GitHub</a> .</p></li>
+<li><p>Поместите его в той же дериктории, где находится ваш .fasta файл.</p></li>
+<li><p>Откройте в любой программе, поддерживающей выполнение py файлов.</p></li>
+</ol>
+</section>
+<section id="id3">
+<h2>Использование<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li><p>При обычном запуске вам сначала предложит ввести название файла или полный путь до него, если он не в той же папке, что FastaReader.py. После этого вам выведет всю основную информацию о нём.</p></li>
+<li><dl class="simple">
+<dt>Если вам не нужно всё, то в полме «Менять выводные данные здесь:» можно поменять вывод. Обязательно прописать <cite>out.</cite> и сразу после, без пробела, одну из этих функций:</dt><dd><ul>
+<li><p>len() — Вычисляет длину последовательности и выводит в консоль результат.</p></li>
+<li><p>str() — Приводит последовательность к строковому виду.</p></li>
+<li><p>seq_alphabet() — Определяет тип последовательности (нуклеотиды или протеины).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 </section>
 </section>
 
@@ -140,7 +160,7 @@ data-aria-dark="Switch to auto color mode">
     </div>
   </div>
 </footer>
-      <script src="_static/documentation_options.js?v=a8ee371b"></script>
+      <script src="_static/documentation_options.js?v=47a0e12c"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="_static/translations.js?v=cd1d70c9"></script>

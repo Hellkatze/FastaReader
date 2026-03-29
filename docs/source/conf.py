@@ -9,7 +9,7 @@
 project = 'Fasta Reader'
 copyright = '2026, Ivan Alferov'
 author = 'Ivan Alferov'
-release = 'beta-01'
+release = '1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -18,9 +18,8 @@ import sys
 sys.path.insert(0, os.path.abspath('../../'))
 
 extensions = [
-    'sphinx.ext.autodoc',      # Автоматическое извлечение докстрингов
-    'sphinx.ext.napoleon',     # Поддержка Google/NumPy style
-    'sphinx.ext.viewcode',     # Добавление ссылок на исходный код
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
     ]
 
 templates_path = ['_templates']

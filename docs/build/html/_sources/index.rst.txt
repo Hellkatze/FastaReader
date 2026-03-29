@@ -6,13 +6,14 @@
 Fasta Reader documentation
 ==========================
 
-Program for read fasta format file by Ivan Alferov
+Программа для чтения и анализа файлов формата FASTA.
 
-.. note::
-   This project is under active development.
+.. .. note::
+..    This project is under active development.
 
 .. automodule:: FastaReader
    :members:
+   :private-members:
 
 .. toctree::
    usage
