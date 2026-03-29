@@ -17,3 +17,5 @@
     - str() — Приводит последовательность к строковому виду.
 
     - seq_alphabet() — Определяет тип последовательности (нуклеотиды или протеины).
+
+<img width="1238" height="499" alt="image" src="https://github.com/user-attachments/assets/50005bf9-ad16-4a4e-8e40-1ac3b2c706a5" />
