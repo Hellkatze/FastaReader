@@ -7,19 +7,19 @@ class Seq:
         seq : Собсвенно последовательность.
     """
 
-    def __init__(self, head, sequence):
+    def __init__(self, head, sequence): #creating class properties
         self.head = head
         self.seq = sequence
 
     def str(self):
         """Приводит последовательность к строковому виду."""
-        print("Name:", self.head.strip('>'), "\nSequence:", self.seq)
+        print("Name:", self.head.strip('>'), "\nSequence:", self.seq) #sequence in string
 
     def len(self):
         """
         Вычисляет длину последовательности и выводит в консоль результат.
         """
-        self.len = len(self.seq)
+        self.len = len(self.seq) #get sequence lenght
         print(self.len)
 
     def seq_alphabet(self):
@@ -29,10 +29,10 @@ class Seq:
         Returns:
             str: 'Nucleotide', если в последовательности встречаются только нуклеотиды, иначе 'Protein'.
         """
-        nuq_chars = set("ATGCU")
-        seq_chars = set(self.seq.upper())
+        nuq_chars = set("ATGCU") #creating set of nucleotide
+        seq_chars = set(self.seq.upper()) #creating set from our sequence(all symbols r big)
 
-        if seq_chars.issubset(nuq_chars):
+        if seq_chars.issubset(nuq_chars): #check for subset
             print("Nucleotide")
         else:
             print("Protein")
@@ -54,7 +54,7 @@ class FastaReader:
         Проверяет соответсвие формата заданного файла.
         
         """
-        with open(self.path, 'r') as file:
+        with open(self.path, 'r') as file: #reading file
             first_line = file.readline().strip()
             if not first_line.startswith('>'):
                 raise ValueError("Not Fasta")
@@ -64,26 +64,25 @@ class FastaReader:
         Построчно читает файл и генерирует объекты Seq, если прошёл порверку формата.
 
         """
-        self.__format_check()
+        self.__format_check() #check validating format
 
         with open(self.path, 'r') as file:
             head = None
             seq_list = []
 
             for lines in file:
-                lines = lines.strip()
-                if not lines:
-                    continue
+                lines = lines.strip() #remove spaces
+                if not lines: continue  #skip empty lines
 
-                if lines.startswith('>'):
-                    if head is not None:
-                        yield Seq(head, "".join(seq_list))
+                if lines.startswith('>'): #check for new cell
+                    if head is not None: #remove zero cell
+                        yield Seq(head, "".join(seq_list)) #creating Seq object
                     head = lines
                     seq_list = []
-                else:
+                else: #appending line to current sequence
                     seq_list.append(lines)
             
-            if head is not None:
+            if head is not None: #for last cell
                 yield Seq(head, "".join(seq_list))
 
 # ---демнострация
