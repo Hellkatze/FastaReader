@@ -1,6 +1,6 @@
 # FastaReader
 Прогрfмма создана в качестве домашней работы студента Ивана Алферова и служит для того, чтобы читать файлы формата fastaи немного анализировать их.
-
+https://drive.google.com/file/d/1nsykf1Wtko0bbROYu7gANvaoGBdOx2cd/view
 ## Установка
 1. Для использования FastaReader скачайте py файл с таким названием с моего [GitHub](https://github.com/Hellkatze/FastaReader) .
 
